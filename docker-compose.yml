@@ -1,0 +1,22 @@
+# Postgres for the mandated SQL database. The app falls back to SQLite when
+# DATABASE_URL is unset, so this is opt-in:
+#   docker compose up -d
+#   set database_url=postgresql+psycopg2://aivoa:aivoa@localhost:5432/aivoa_qms
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: aivoa
+      POSTGRES_PASSWORD: aivoa
+      POSTGRES_DB: aivoa_qms
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aivoa -d aivoa_qms"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  pgdata:

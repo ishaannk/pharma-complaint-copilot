@@ -196,4 +196,3 @@ field, the completeness gate, and duplicate scoring. No network, no framework.
 - Embedding-based duplicate detection once the ledger is large enough for exact-batch matching to miss re-phrased reports
 - Reviewer sign-off with an e-signature, which is what 21 CFR Part 11 actually requires
 - OCR for scanned complaint scans — explicitly out of scope here
-"# pharma-complaint-copilot" 

@@ -1,0 +1,17 @@
+# Floors, not pins: the langchain/langgraph line moves fast and pinning it to a
+# patch release is what breaks a reviewer's clone six weeks from now.
+fastapi>=0.115
+uvicorn[standard]>=0.34
+python-multipart>=0.0.9
+pydantic>=2.10
+sqlalchemy>=2.0.36
+psycopg2-binary>=2.9.10
+python-dotenv>=1.0.1
+langgraph>=0.2.60
+langchain-groq>=1.1.0
+langchain-openai>=0.3      # OpenRouter is OpenAI-API-compatible
+langchain-core>=0.3.29
+groq>=0.20
+pymupdf>=1.25
+python-docx>=1.1
+reportlab>=4.2
