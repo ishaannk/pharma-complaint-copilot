@@ -189,10 +189,3 @@ python backend/test_agent.py
 
 Covers JSON salvage from chatty model output, the patch merge that must never drop a
 field, the completeness gate, and duplicate scoring. No network, no framework.
-
-## Things I would do next
-
-- Stream the reply token by token; the risk assessment is the slow node and it renders last anyway
-- Embedding-based duplicate detection once the ledger is large enough for exact-batch matching to miss re-phrased reports
-- Reviewer sign-off with an e-signature, which is what 21 CFR Part 11 actually requires
-- OCR for scanned complaint scans — explicitly out of scope here
